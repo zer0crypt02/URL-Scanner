@@ -1,0 +1,100 @@
+/* Genel stil ve sıfırlamalar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Buton Tasarımı */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.4s ease; /* Geçiş animasyonu */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+}
+
+/* Buton üzerine gelindiğinde animasyon */
+button:hover {
+    background-color: #45a049; /* Yumuşak renk değişimi */
+    transform: scale(1.05); /* Hafif büyüme efekti */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Daha belirgin gölge efekti */
+}
+
+/* Sonuç mesajı */
+.result {
+    display: none;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.result.valid {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.result.invalid {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.result.error {
+    background-color: #f9e1e1;
+    color: #c12e2a;
+}
+
+/* Animasyon */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.result {
+    animation: slideIn 0.5s ease-out;
+}
